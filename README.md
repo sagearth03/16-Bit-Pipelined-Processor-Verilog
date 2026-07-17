@@ -1,25 +1,22 @@
 # 16-Bit Pipelined Processor in Verilog 🚀
 
-A custom 16-bit pipelined processor designed from scratch in Verilog. This project focuses on building a complete CPU architecture step-by-step, including instruction fetch, decode, execution, memory access, and writeback stages, along with hazard resolution using data forwarding.
+A custom 16-bit pipelined processor designed from scratch in Verilog. This project focuses on building a complete CPU architecture modularly, with each component isolated for clear understanding, simulation, and testing.
 
 ## 📌 Objective
-To deeply understand Computer Organization and Architecture (COA) and hardware design by practically implementing a processor at the Register Transfer Level (RTL).
+To deeply understand Computer Organization and Architecture (COA) and hardware design by practically implementing a processor at the Register Transfer Level (RTL). 
 
----
+## 🏗️ Hardware Architecture Modules
 
-## 🗓️ Development Timeline & Project Log
+### 📁 [01_Program_Counter](./01_Program_Counter)
+* **Description:** The core instruction pointer that tracks the execution sequence.
+* **Features:** Synchronous operation (`posedge clk`), master reset, and dynamic branching (jump control).
+* **Contents:** RTL code (`pc.v`), automated testbench (`pc_tb.v`), and simulation waveform proving correct execution.
 
-This section tracks the day-by-day modular development of the processor architecture.
-
-### Day 1: The Instruction Fetch Foundation
-**Files Added:** `pc.v`
-* **Program Counter (PC):** Implemented the core program counter that acts as the execution bookmark for the processor.
-* **Key Features:** * Synchronous operation triggering on the positive edge of the clock (`posedge clk`).
-  * Master synchronous reset (`reset`) to initialize the PC back to `16'h0000`.
-  * Support for dynamic control flow via a `jump` flag, allowing the PC to branch to a specific `jump_addr` (crucial for loops and if-else conditions).
-
----
+### 📁 [02_ALU](./02_ALU)
+* **Description:** A highly optimized Execution Engine capable of 16-bit parallel processing.
+* **Features:** 4-bit opcode control, hardware-sliced 8-bit multiplication/division, hardware-level divide-by-zero fail-safe, and zero-flag generation.
+* **Contents:** RTL code (`alu.v`), automated testbench (`alu_tb.v`), and simulation waveform validating multiple arithmetic and logical operations.
 
 ## 🛠️ Tools & Technologies
 * **Language:** Verilog HDL
-* **Simulation/Testing:**  Xilinx Vivado, Icarus Verilog , GTKwave
+* **Simulation/Testing:** Xilinx Vivado, Icarus Verilog, GTKWave
