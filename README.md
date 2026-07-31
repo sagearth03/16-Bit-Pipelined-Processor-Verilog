@@ -3,7 +3,7 @@
 A custom 16-bit pipelined processor designed from scratch in Verilog. This project focuses on building a complete CPU architecture modularly, with each component isolated for clear understanding, simulation, and testing.
 
 ## 📌 Objective
-To deeply understand Computer Organization and Architecture (COA) and hardware design by practically implementing a processor at the Register Transfer Level (RTL). 
+To deeply understand Computer Organization and Architecture (COA) and hardware design by practically implementing a processor at the Register Transfer Level (RTL).
 
 ## 🏗️ Hardware Architecture Modules
 
@@ -16,6 +16,11 @@ To deeply understand Computer Organization and Architecture (COA) and hardware d
 * **Description:** A highly optimized Execution Engine capable of 16-bit parallel processing.
 * **Features:** 4-bit opcode control, hardware-sliced 8-bit multiplication/division, hardware-level divide-by-zero fail-safe, and zero-flag generation.
 * **Contents:** RTL code (`alu.v`), automated testbench (`alu_tb.v`), and simulation waveform validating multiple arithmetic and logical operations.
+
+### 📁 [03_Register_File](./03_Register_File)
+* **Description:** The local high-speed storage core of the CPU, bridging main memory and the Execution Engine.
+* **Features:** 16x16-bit register array, dual independent read ports, single synchronous write port, internal forwarding (asynchronous write-before-read) for hazard resolution, and a hardware-level R0 immutability trap.
+* **Contents:** RTL code (`register_file.v`), automated testbench (`register_file_tb.v`), and simulation waveform demonstrating simultaneous read and R0 protection.
 
 ## 🛠️ Tools & Technologies
 * **Language:** Verilog HDL
