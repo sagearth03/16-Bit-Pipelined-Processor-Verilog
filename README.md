@@ -1,4 +1,4 @@
-# 16-Bit Pipelined Processor in Verilog 🚀
+# 16-Bit Custom RISC-V based Pipelined Processor in Verilog 🚀
 
 A custom 16-bit pipelined processor designed from scratch in Verilog. This project focuses on building a complete CPU architecture modularly, with each component isolated for clear understanding, simulation, and testing.
 
