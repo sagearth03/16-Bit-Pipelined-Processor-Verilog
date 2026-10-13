@@ -12,10 +12,10 @@ To deeply understand Computer Organization and Architecture (COA) and hardware d
 * **Features:** Synchronous operation (`posedge clk`), master reset, and dynamic branching (jump control).
 * **Contents:** RTL code (`pc.v`), automated testbench (`pc_tb.v`), and simulation waveform proving correct execution.
 
-### 📁 [02_ALU](./02_ALU)
-* **Description:** A highly optimized Execution Engine capable of 16-bit parallel processing.
-* **Features:** 4-bit opcode control, hardware-sliced 8-bit multiplication/division, hardware-level divide-by-zero fail-safe, and zero-flag generation.
-* **Contents:** RTL code (`alu.v`), automated testbench (`alu_tb.v`), and simulation waveform validating multiple arithmetic and logical operations.
+📁 [02_ALU](./02_ALU)
+* **Description:** An upgraded, highly optimized Execution Engine (V2.0) re-engineered specifically for Edge AI workloads.
+* **Features:** 4-bit opcode control, integrated **Custom Multiply-Accumulate (MAC) datapath** for parallel matrix operations, dynamic multiplexing for zero-stall routing, instantaneous zero-flag generation, and hardware-level fail-safes.
+* **Contents:** Upgraded RTL code (`alu.v`), automated testbench (`alu_tb.v`), detailed RTL Schematic showcasing the MAC integration, and behavioral simulation waveform validating heavy arithmetic operations.
 
 ### 📁 [03_Register_File](./03_Register_File)
 * **Description:** The local high-speed storage core of the CPU, bridging main memory and the Execution Engine.
